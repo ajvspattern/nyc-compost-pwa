@@ -1,0 +1,20 @@
+{
+  "name": "NYC Food Scrap Drop-offs",
+  "short_name": "NYC Food Scraps",
+  "description": "Find food scrap drop-off locations in New York City",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["environment", "utilities"],
+  "screenshots": []
+}
