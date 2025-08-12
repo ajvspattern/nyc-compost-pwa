@@ -142,8 +142,8 @@ function checkIfOpenNow(location, now) {
 function isOpenThisMonth(location, now) {
   const openMonths = location.open_months?.toLowerCase() || '';
   
-  if (!openMonths) {
-    return true; // Assume open year-round if no months specified
+  if (!openMonths || openMonths.includes('year round')) {
+    return true; // Assume open year-round
   }
   
   const currentMonth = now.toLocaleString('en-US', { month: 'long' }).toLowerCase();
