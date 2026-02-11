@@ -1,10 +1,10 @@
 const CACHE_NAME = 'nyc-food-scraps-v1';
 const STATIC_ASSETS = [
   '/',
-  '/index.html',
-  '/main.js',
-  '/style.css',
-  '/manifest.json',
+  'index.html',
+  'main.js',
+  'style.css',
+  'manifest.json',
   'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css',
   'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js'
 ];

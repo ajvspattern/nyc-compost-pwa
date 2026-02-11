@@ -9,7 +9,7 @@
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/compost_logo.svg",
+      "src": "compost_logo.svg",
       "sizes": "172x172",
       "type": "image/svg+xml",
       "purpose": "any maskable"
