@@ -57,8 +57,8 @@ function initializeMap() {
   });
 
   // Add tile layer
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors',
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
+    attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community',
     maxZoom: 18,
   }).addTo(map);
 }
@@ -108,7 +108,7 @@ function createMarkers() {
     // Create custom icon based on availability
     const icon = L.divIcon({
       className: `custom-marker ${isOpenNow ? 'marker-open' : 'marker-closed'}`,
-      html: isOpenNow ? '🟢' : '⚫',
+      html: isOpenNow ? '🪴' : '⚪️',
       iconSize: [25, 25],
       iconAnchor: [12, 12]
     });
@@ -270,8 +270,8 @@ function isOpenTodayAndNow(location, now) {
 
 function createPopupContent(location, isOpenNow) {
   const status = isOpenNow ? 
-    '<span class="status-open">🟢 Open Now</span>' : 
-    '<span class="status-closed">⚫ Closed Now</span>';
+    '<span class="status-open">🪴 Open Now</span>' : 
+    '<span class="status-closed">⚪️ Closed Now</span>';
   
   return `
     <div class="popup-content">
@@ -288,8 +288,8 @@ function createPopupContent(location, isOpenNow) {
 function updateInfoPanel(location, isOpenNow) {
   const panel = document.getElementById('infoPanel');
   const status = isOpenNow ? 
-    '<span class="status-open">🟢 Open Now</span>' : 
-    '<span class="status-closed">⚫ Closed Now</span>';
+    '<span class="status-open">🪴 Open Now</span>' : 
+    '<span class="status-closed">⚪️ Closed Now</span>';
   
   panel.innerHTML = `
     <h3>${location.food_scrap_drop_off_site || 'Food Scrap Drop-off'}</h3>
@@ -320,7 +320,7 @@ function getUserLocation() {
         userLocationMarker = L.marker([latitude, longitude], {
           icon: L.divIcon({
             className: 'user-location-marker',
-            html: '📍',
+            html: '❌',
             iconSize: [30, 30],
             iconAnchor: [15, 15]
           })
