@@ -2,7 +2,7 @@
   "name": "NYC Food Scrap Drop-offs",
   "short_name": "NYC Food Scraps",
   "description": "Find food scrap drop-off locations in New York City",
-  "start_url": "/",
+  "start_url": "/nyc-compost-pwa/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#2563eb",
