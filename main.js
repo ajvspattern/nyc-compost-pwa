@@ -1,6 +1,3 @@
-import './style.css'
-import L from 'leaflet';
-
 // App state
 let map;
 let userLocationMarker;
